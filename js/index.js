@@ -19,31 +19,32 @@ for (let singleDonationSection of donationSections) {
         if (isNaN(amount) || amount <= 0 || amount > parseFloat(balanceAmount.innerText)) {
             inputField.value = null;
             alert('Invalid Donation Amount');
-            document.getElementById("my_modal_5").close()
+            document.getElementById("my_modal_5").close();
             return;
         }
         // if (isNaN(amount) || amount == 0) {
         //     inputField.value = null;
         //     return;
         // }
+
         const sectionDonation = Number(donationAmountSpan.innerText);
         const updateAmount = sectionDonation + amount;
         donationAmountSpan.innerText = updateAmount.toFixed(2);
-
         // updating Main Balance
         const currentBalance = Number(balanceAmount.innerText);
         const updateBalance = currentBalance - amount;
         balanceAmount.innerText = updateBalance.toFixed(2);
         inputField.value = null;
         document.getElementById("my_modal_5").showModal();
+        // document.getElementById("my_modal_5").preventDefault();
 
         // history tab items
         const historyItem = document.createElement("div");
         historyItem.className = "border-2 border-secondary rounded-2xl p-8";
 
         historyItem.innerHTML = `
-    <p class="text-xl font-bold"> ${amount.toFixed(2)} Taka is Donated for ${donationField.innerText} Bangladesh</p>
-    <p class="font-light">Date: ${new Date().toLocaleString()}</p>
+    <p class="text-xl font-bold text-primary-txt"> ${amount.toFixed(2)} Taka is Donated for ${donationField.innerText}</p>
+    <p class="font-light">Date: ${new Date().toString()}</p>
         
   
     
