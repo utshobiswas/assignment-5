@@ -13,7 +13,9 @@ for (let singleDonationSection of donationSections) {
     donateBtn.addEventListener('click', function () {
         // updating the section donation
         const amount = Number(inputField.value);
-        if (isNaN(amount) || amount > 5000 || amount <= 0) {
+        
+        console.log(amount, balanceAmount);
+        if (isNaN(amount) || amount <= 0 || amount > parseFloat(balanceAmount.innerText)) {
             inputField.value = null;
             alert('Invalid Donation Amount');
             return;
@@ -24,14 +26,31 @@ for (let singleDonationSection of donationSections) {
         // }
         const sectionDonation = Number(donationAmountSpan.innerText);
         const updateAmount = sectionDonation + amount;
-        donationAmountSpan.innerText = updateAmount;
+        donationAmountSpan.innerText = updateAmount.toFixed(2);
 
         // updating Main Balance
         const currentBalance = Number(balanceAmount.innerText);
         const updateBalance = currentBalance - amount;
-        balanceAmount.innerText = updateBalance;
+        balanceAmount.innerText = updateBalance.toFixed(2);
         inputField.value = null;
+
+        // history tab items
+        const historyItem = document.createElement("div");
+        historyItem.className = "border-2 border-secondary rounded-2xl p-8";
+
+        historyItem.innerHTML = `
+    <p class="text-xl font-bold"> ${amount.toFixed(2)} Taka is $</p>
+    <p class="font-light">Date: ${new Date().toLocaleString()}</p>
+        
+  
+    
+    `;
+
+        const historyContainer = document.getElementById("history-list");
+
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     })
+
 
 
 }
@@ -84,17 +103,26 @@ donationTab.addEventListener('click', function () {
 
 
 
+
+
+
+
+
+
+
+
+
 // history tab items
-const historyItem = document.createElement("div");
-historyItem.className = "border-2 border-secondary rounded-2xl p-8";
+// const historyItem = document.createElement("div");
+// historyItem.className = "border-2 border-secondary rounded-2xl p-8";
 
-historyItem.innerHTML = `
-    <p></p>
-    <p class="">${new Date().toLocaleDateString()}</p>
-    // needed to add more field
+// historyItem.innerHTML = `
+//     <p class="text-xs">Donation: $${amount.toFixed(2)}</p>
+//     <p class="text-xs">${new Date().toLocaleDateString()}</p>
+  
     
-    `;
+//     `;
 
-const historyContainer = document.getElementById("history-list");
+// const historyContainer = document.getElementById("history-list");
 
-historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+// historyContainer.insertBefore(historyItem, historyContainer.firstChild);

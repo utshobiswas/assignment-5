@@ -38,14 +38,17 @@
 </head>
 
 <body class="font-lexend w-full bg-normal-bgcolor">
-    <header class="bg-normal-bgcolor px-0 pt-7  sticky top-0">
+    <header class="bg-normal-bgcolor px-0 pt-7  sticky top-0 backdrop-blur-xl">
         <!-- nav bar section -->
         <nav class="max-w-6xl mx-auto pb-7">
             <div class="navbar">
                 <div class="navbar-start">
-                    <button
-                        class="btn bg-primary rounded-lg text-xl font-semibold text-primary-txt py-3 px-5 border-none">Blog
-                    </button>
+                    <a href="./blog.html">
+                        <button
+                            class="btn bg-primary rounded-lg text-xl font-semibold text-primary-txt py-3 px-5 border-none">Blog
+                        </button>
+                    </a>
+
                 </div>
                 <div class="navbar-center">
                     <p class="btn btn-ghost text-xl text-primary-txt">
@@ -75,9 +78,8 @@
     <main class="bg-white mx-auto">
 
         <!-- Donation Card Section -->
-        <!-- donate card 1 -->
         <section id="donation-cards">
-
+            <!-- donate card 1 -->
             <section class="max-w-6xl mx-auto">
                 <div class="donation-section flex flex-col lg:flex-row text-left gap-8 border-2 rounded-2xl p-8">
                     <img src="./assets/noakhali.png" alt="Album" />
@@ -94,9 +96,9 @@
                             efforts
                             and making a positive impact on the lives of those in need.</p>
                         <input type="number" placeholder="Write Donation Amount" class="border-2 rounded-lg h-14 px-8">
-                        <!-- <p id="amount-error" class="hidden">Invalid Amount!</p> -->
+
                         <button
-                            class="donate-btn btn bg-primary rounded-lg text-xl font-semibold text-primary-txt  px-8 border-none">Donate
+                            class="donate-btn btn bg-primary rounded-lg text-xl font-semibold text-primary-txt  px-8 border-none onclick="my_modal_5.showModal()" ">Donate
                             Now
                         </button>
                     </div>
@@ -158,11 +160,23 @@
         </section>
         <!-- History Section -->
         <section id="history-section" class="max-w-6xl mx-auto hidden">
-            <div class="history-list">
+            <div id="history-list">
 
-                dfdsf
+               
             </div>
         </section>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Hello!</h3>
+              <p class="py-4">Press ESC key or click the button below to close</p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
     </main>
     <footer>
 

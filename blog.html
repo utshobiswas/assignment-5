@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <!-- lexend Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI & Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary': 'rgb(180, 244, 97)',
+                        'secondary': 'rgba(17, 17, 17, 0.05)',
+                        'normal-bgcolor': 'rgb(249, 247, 243)',
+                        'primary-txt': 'rgb(17, 17, 17)',
+                        'secondary-txt': 'rgba(17, 17, 17, 0.7)',
+
+                    },
+                    fontFamily: {
+                        'lexend': ["Lexend", 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend w-full bg-normal-bgcolor">
+    <header class="bg-normal-bgcolor px-0 pt-7  sticky top-0">
+        <!-- nav bar section -->
+        <nav class="max-w-6xl mx-auto pb-7">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <a href="./index.html">
+                        <button
+                            class="btn bg-primary rounded-lg text-xl font-semibold text-primary-txt py-3 px-5 border-none">Home
+                        </button>
+                    </a>
+                </div>
+                <div class="navbar-center">
+                    <p class="btn btn-ghost text-xl text-primary-txt">
+                        <img src="./assets/logo.png" alt="logo">
+                        Donate Bangladesh
+                    </p>
+                </div>
+                <div class="navbar-end">
+                    <p class="btn btn-ghost text-xl text-secondary-txt">
+                        <img src="./assets/coin.png" alt="coin">
+                        <span id="main-balance">5500</span> BDT
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-white mx-auto">
+        <!-- Blog question section -->
+        <section class="max-w-6xl mx-auto">
+            <div class=""></div>
+            <!-- text section -->
+            <div class="text-center pb-8">
+                <h2 class="text-4xl font-bold text-primary-txt">Important FAQ</h2>
+            </div>
+            <!-- Cards -->
+            <!-- card 1 -->
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium text-secondary-txt">What is the Document Object Model
+                    (DOM)?</div>
+                <div class="collapse-content">
+                    <p>Outline the range of services you provide, such ure selection, project management, and more.</p>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium text-secondary-txt">How do you select an element from the
+                    DOM?</div>
+                <div class="collapse-content">
+                    <p>Describe the initial consultation process, including huld bring, and what to expect during the
+                        first
+                        appointment.</p>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium text-secondary-txt">What is event delegation in the context of the DOM, and why is it useful?
+                </div>
+                <div class="collapse-content">
+                    <p>Provide a step-by-step overview of your design process, froentation and project completion.</p>
+                </div>
+            </div>
+            <!-- card 4 -->
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium text-secondary-txt">How do you manipulate an element's attributes and styles using the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>Explain how pricing is determined. Mention facto hourly rates, or project-based pricing.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
