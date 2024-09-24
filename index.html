@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <!-- lexend Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI & Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary': 'rgb(180, 244, 97)',
+                        'secondary': 'rgba(17, 17, 17, 0.05)',
+                        'normal-bgcolor': 'rgb(249, 247, 243)',
+                        'primary-txt': 'rgb(17, 17, 17)',
+                        'secondary-txt': 'rgba(17, 17, 17, 0.7)',
+
+                    },
+                    fontFamily: {
+                        'lexend': ["Lexend", 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend w-full bg-normal-bgcolor">
+    <header class=" px-5 lg:px-0 pt-8 pb-10 lg:pt-14 lg:pb-20">
+        <!-- nav bar section -->
+        <nav class="max-w-6xl mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <a class="btn bg-primary rounded-lg text-xl font-semibold text-primary-txt py-3 px-5 border-none">Blog
+                    </a>
+                </div>
+                <div class="navbar-center">
+                    <a class="btn btn-ghost text-xl text-primary-txt">
+                        <img src="./assets/logo.png" alt="logo">
+                        Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+                    <button class="btn btn-ghost text-xl text-secondary-txt">
+                        <img src="./assets/coin.png" alt="coin">
+                        <span id="main-balance">5500</span> BDT
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="bg-white mx-auto">
+        <!-- Button Section -->
+        <section class="max-w-6xl mx-auto pt-20 pb-8">
+            <div class="max-w-80 mx-auto text-secondary-txt">
+                <button id="donation-tab"
+                    class=" bg-primary rounded-lg text-xl font-semibold text-primary-txt py-3 px-5 border-none">Donation
+                </button>
+                <button id="history-tab"
+                    class=" border-2 rounded-lg text-xl font-semibold  py-3 px-5 ">History
+                </button>
+            </div>
+        </section>
+        <!-- Donation Card Section -->
+        <!-- donate card 1 -->
+        <section id="donation-cards" class="max-w-6xl mx-auto">
+            <div class=" flex flex-col lg:flex-row text-left gap-8 border-2 rounded-2xl p-8">
+                <img src="./assets/noakhali.png" alt="Album" />
+                <div class="card-body">
+                    <h2 class="card-title font-bold text-xl ">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p class="font-light"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your
+                        donation will help provide essential supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes difference. Please join us in supporting the relief efforts
+                        and making a positive impact on the lives of those in need.</p>
+                    <input type="number" name="" id="" placeholder="Write Donation Amount"
+                        class="border-2 rounded-lg h-14 px-8">
+
+                    <a class="btn bg-primary rounded-lg text-xl font-semibold text-primary-txt  px-8 border-none">Donate
+                        Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
