@@ -13,10 +13,15 @@ for (let singleDonationSection of donationSections) {
     donateBtn.addEventListener('click', function () {
         // updating the section donation
         const amount = Number(inputField.value);
-        if (isNaN(amount) || amount == 0) {
+        if (isNaN(amount) || amount > 5000 || amount <= 0) {
             inputField.value = null;
+            alert('Invalid Donation Amount');
             return;
         }
+        // if (isNaN(amount) || amount == 0) {
+        //     inputField.value = null;
+        //     return;
+        // }
         const sectionDonation = Number(donationAmountSpan.innerText);
         const updateAmount = sectionDonation + amount;
         donationAmountSpan.innerText = updateAmount;
