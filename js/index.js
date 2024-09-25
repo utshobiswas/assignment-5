@@ -115,18 +115,3 @@ donationTab.addEventListener('click', function () {
 
 
 
-
-// history tab items
-// const historyItem = document.createElement("div");
-// historyItem.className = "border-2 border-secondary rounded-2xl p-8";
-
-// historyItem.innerHTML = `
-//     <p class="text-xs">Donation: $${amount.toFixed(2)}</p>
-//     <p class="text-xs">${new Date().toLocaleDateString()}</p>
-  
-    
-//     `;
-
-// const historyContainer = document.getElementById("history-list");
-
-// historyContainer.insertBefore(historyItem, historyContainer.firstChild);
